@@ -1,0 +1,24 @@
+{{!-- //Rota /categorias --}}
+
+<h1>Categoria: {{categoria.nome}}</h1>
+<hr>
+<a href="/admin/postagens/add"><button class="btn btn-success">Criar Postagem</button></a>
+
+{{#each postagens}}
+
+<div class="card mt-4">
+  <div class="card-body">
+  <h3>{{titulo}}</h3>  
+  <p>{{descricao}}</p>
+  
+  <hr>
+  
+ <small>Data de publicação: {{data}}</small>
+  
+</div>
+</div>
+
+{{else}}
+<hr>
+<h5>Nenhuma postagem</h5>
+{{/each}}

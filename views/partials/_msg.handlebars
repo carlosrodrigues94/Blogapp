@@ -1,0 +1,10 @@
+{{#if success_msg}} 
+    
+    <div class="alert alert-success">{{success_msg}}</div> <!-- Chaves duplas para importar a id(variaveis globais) do admin.js, 
+    div esta usando classe bootstrap para exibir uma caixa de sucesso--> 
+{{/if}}
+{{#if error_msg}}
+    <div class="alert alert-danger">{{error_msg}}</div><!-- Chaves duplas para importar a id(variaveis globais) do admin.js, 
+    div esta usando classe bootstrap para exibir uma caixa de erro--> 
+{{/if}}  
+<!--Essas duas variaveis estão sendo declaras globais no arquivo, app.js, dessa maneira elas podem ser usadas em qualquer arquivo-->

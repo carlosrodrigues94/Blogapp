@@ -1,0 +1,31 @@
+<div class="jumbotron">
+  <h1 class="display-4">Bem vindo ao Blog do Node</h1>
+  <p class="lead">Esse Blog é um exercício usando Javascript, Nodejs, Bootstrap, e Banco de dados MongoDb</p>
+  <h5>Neste Blog você pode:</h5>
+    <p>> Criar e editar postagens com base em uma categoria selecionada e também criada por você.</p>
+    <p>> Realizar registro de usuario e login.</p>
+  <hr class="my-4">
+  
+  <a class="btn btn-primary btn-lg" href="/usuarios/registro" role="button">Crie uma conta</a><br><br>
+
+  v.1.0
+</div>
+<hr>
+<h2>Postagens recentes: </h2>
+{{#each postagens}}
+{{!-- Para cada postagem, irá renderizar esse codigo abaixo, (each) => Para cada --}}
+
+<div class="card mt-4">
+  <div class="card-body">
+    <h3>{{titulo}}</h3>
+    <p>{{descricao}}</p>
+    <a href="/postagem/{{slug}}"><button class="btn btn-success">Leia mais</button></a>
+    <hr>
+    <small>Categoria: {{categoria.nome}}</small>
+    <small>Data de publicação: {{data}}</small>
+  </div>
+</div>
+
+{{else}}
+<h5>Nenhuma postagem</h5>
+{{/each}}
